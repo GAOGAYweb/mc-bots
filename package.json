@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "deasync": "^0.1.9",
     "mineflayer": "^2.1.1"
   }
 }

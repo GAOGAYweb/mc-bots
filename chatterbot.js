@@ -56,7 +56,7 @@ bot.on('chat', function(username, message) {
     default:
       console.log('default:', username, message);
       var chatbot = require('./child_process_demo');
-      bot.chat(chatbot.say(message));
+      chatbot.say(message, bot.chat);
       // bot.chat("That's nice");
   }
 
@@ -125,12 +125,12 @@ bot.on('spawn', function() {
 bot.on('spawnReset', function(message) {
   bot.chat("Oh noez! My bed is broken.");
 });
-bot.on('forcedMove', function() {
-  bot.chat("I have been forced to move to " + bot.entity.position);
-});
-bot.on('health', function() {
-  bot.chat("I have " + bot.health + " health and " + bot.food + " food");
-});
+// bot.on('forcedMove', function() {
+//   bot.chat("I have been forced to move to " + bot.entity.position);
+// });
+// bot.on('health', function() {
+//   bot.chat("I have " + bot.health + " health and " + bot.food + " food");
+// });
 bot.on('death', function() {
   bot.chat("I died x.x");
 });
